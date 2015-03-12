@@ -3,10 +3,12 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
 
         <!-- android theme colors -->
-        <item name="android:colorPrimary">@color/theme_dialer_primary</item>
-        <item name="android:colorPrimaryDark">@color/theme_dialer_high</item>
-        <item name="android:colorAccent">@color/theme_dialer_accent</item>
-        <item name="android:navigationBarColor">@color/theme_dialer_primary</item>
+        <item name="android:colorPrimary">@color/theme_primary</item>
+        <item name="android:colorPrimaryDark">@color/theme_primaryDark</item>
+        <item name="android:colorAccent">@color/theme_accent</item>
+        <item name="android:navigationBarColor">@color/theme_navigationBar</item>
+        <item name="android:textColorPrimary">@color/theme_textColorPrimary</item>
+        <item name="android:windowBackground">@color/theme_windowBackgroud</item>
 
         <!-- android transitions -->
         <item name="android:windowContentTransitions">true</item>
