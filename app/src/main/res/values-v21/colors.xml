@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Test colors  -->
+    <color name="theme_primary">#ffb74d</color>
+    <color name="theme_primaryDark">#EC407A</color>
+    <color name="theme_accent">#009688</color>
+    <color name="theme_navigationBar">#673AB7</color>
+    <color name="theme_textColorPrimary">#0277BD</color>
+    <color name="theme_windowBackgroud">#CEFFCE</color>
+
     <!-- Theme colors -->
     <color name="theme_light">#F48FB1</color>
     <color name="theme_default_primary">#EC407A</color>
@@ -27,7 +35,6 @@
 
     <color name="color_set_4_primary">#ff8a65</color>
     <color name="color_set_4_accent">#d500f9</color>
-
 
 
 </resources>
