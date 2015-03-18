@@ -3,6 +3,7 @@
     android:id="@+id/sample_main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".AtyMain">
 
     <android.support.v7.widget.Toolbar
@@ -20,18 +21,20 @@
         <FrameLayout
             android:id="@+id/sample_content_fragment"
             android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="2" />
+            android:layout_height="match_parent">
 
-        <FrameLayout
-            android:id="@+id/container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="我是content" />
+
+        </FrameLayout>
+
 
         <fragment
             android:id="@+id/navigation_drawer"
             android:name="cn.alanyuan.materialdemo.fragments.NavigationFragment"
-            android:layout_width="@dimen/navigation_drawer_width"
+            android:layout_width="100dp"
             android:layout_height="match_parent"
             android:layout_gravity="start" />
 

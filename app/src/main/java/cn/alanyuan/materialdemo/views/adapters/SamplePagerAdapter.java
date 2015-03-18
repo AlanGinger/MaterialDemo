@@ -10,8 +10,8 @@ import cn.alanyuan.materialdemo.R;
 
 public class SamplePagerAdapter extends PagerAdapter {
 
-    private final String [] TITLES = {"SPEED DIAL", "RECENTS", "CONTACTS"};
-    private final int FRAGMENT_COUNT = 3;
+    private final String[] TITLES = {"聊天", "动态", "我", "任务"};
+    private final int FRAGMENT_COUNT = 4;
     private Context context;
 
     public SamplePagerAdapter(Context context) {
@@ -38,8 +38,8 @@ public class SamplePagerAdapter extends PagerAdapter {
     public Object instantiateItem(ViewGroup container, int position) {
 
         View view = LayoutInflater.from(context).inflate(
-            R.layout.fragment_dialer_sample_page,
-            container, false);
+                R.layout.fragment_dialer_sample_page,
+                container, false);
 
         container.addView(view);
         return view;
