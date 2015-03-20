@@ -13,7 +13,7 @@
 
         </activity>
 
-        <activity android:name=".activities.ListViewActivity"></activity>
+        <activity android:name=".activities.ListViewActivity"> </activity>
 
         <activity android:name=".activities.RecyclerViewActivity">
 
