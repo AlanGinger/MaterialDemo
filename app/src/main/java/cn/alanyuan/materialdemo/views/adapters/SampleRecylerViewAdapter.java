@@ -57,6 +57,19 @@ public class SampleRecylerViewAdapter extends RecyclerView.Adapter<SampleViewHol
         return models.size();
     }
 
+    //增加Item
+    public void addItem(int postion){
+
+        notifyItemInserted(postion);
+    }
+
+    //删除Item
+    public void removeItem(int postion){
+
+
+        notifyItemRemoved(postion);
+    }
+
     //设置点击监听事件
     public void setOnItemClickListener(OnRecylerItemClickListener onRecylerItemClickListener) {
         this.onRecylerItemClickListener = onRecylerItemClickListener;
