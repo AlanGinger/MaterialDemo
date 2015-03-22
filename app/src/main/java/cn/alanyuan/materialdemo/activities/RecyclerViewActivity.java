@@ -32,6 +32,9 @@ public class RecyclerViewActivity extends Activity implements OnRecylerItemClick
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recyclerview);
+        if (savedInstanceState!=null){
+
+        }
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.setHasFixedSize(true);
@@ -63,5 +66,10 @@ public class RecyclerViewActivity extends Activity implements OnRecylerItemClick
     public void onItemLongClick(View view, int position) {
         models.add(position, new SampleModel("哆啦A梦", 101, "哆啦A梦爱吃铜锣烧"));
         mAdapter.notifyItemInserted(position);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
     }
 }

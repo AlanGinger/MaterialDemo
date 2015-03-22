@@ -32,7 +32,7 @@ public class BaseRecyclerViewHolder extends RecyclerView.ViewHolder implements O
     @Override
     public void onClick(View v) {
         if (onRecylerItemClickListener != null) {
-            onRecylerItemClickListener.onItemClick(v, getPosition());
+            onRecylerItemClickListener.onItemClick(v, this.getPosition());
         }
     }
 
