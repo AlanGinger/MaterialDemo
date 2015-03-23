@@ -3,6 +3,7 @@ package cn.alanyuan.materialdemo.activities;
 import android.app.Activity;
 import android.graphics.Outline;
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -23,7 +24,7 @@ import cn.alanyuan.materialdemo.views.adapters.SampleRecylerViewAdapter;
 import cn.alanyuan.materialdemo.views.widgets.SampleDivider;
 
 /**
- * RecyclerView
+ * RecyclerView 简单示例
  * Created by alanyuan on 15/3/19.
  */
 public class RecyclerViewActivity extends Activity implements OnRecylerItemClickListener, OnRecylerItemLongClickListener, View.OnClickListener {
@@ -34,17 +35,19 @@ public class RecyclerViewActivity extends Activity implements OnRecylerItemClick
     protected LinearLayoutManager layoutManager;
     protected View fabView;
     protected FrameLayout mDeleteBar;
+    protected SwipeRefreshLayout swipeRefreshLayout;
     int i = 5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recyclerview);
+        setContentView(R.layout.activity_refresh_recycle);
         if (savedInstanceState != null) {
 
         }
         mDeleteBar = (FrameLayout) findViewById(R.id.deleteBar);
         initFab();
+        initView();
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);
@@ -55,6 +58,25 @@ public class RecyclerViewActivity extends Activity implements OnRecylerItemClick
         mRecyclerView.addItemDecoration(new SampleDivider(this));
         setListener();
     }
+
+    protected void initView() {
+        //findview
+        swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout);
+        //设置卷内的颜色
+        swipeRefreshLayout.setColorSchemeResources(android.R.color.holo_blue_bright,
+                android.R.color.holo_green_light, android.R.color.holo_orange_light, android.R.color.holo_red_light);
+        //设置下拉刷新监听
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                //.......操作
+
+                //停止刷新动画
+                swipeRefreshLayout.setRefreshing(false);
+            }
+        });
+    }
+
 
     //绘制圆形按钮
     protected void initFab() {
@@ -80,7 +102,7 @@ public class RecyclerViewActivity extends Activity implements OnRecylerItemClick
     }
 
     protected void setListener() {
-        setScrollListener();
+//        setScrollListener();
         mAdapter.setOnItemClickListener(this);
         mAdapter.setOnItemLongClickListener(this);
         fabView.setOnClickListener(this);
@@ -110,6 +132,8 @@ public class RecyclerViewActivity extends Activity implements OnRecylerItemClick
                 mAdapter.addItem(position);
         }
     }
+
+
 
     public void setScrollListener() {
 
