@@ -10,12 +10,12 @@
         <item name="android:textColorPrimary">@color/theme_textColorPrimary</item>
         <item name="android:windowBackground">@color/theme_windowBackgroud</item>
 
-        <!-- android transitions -->
-        <item name="android:windowContentTransitions">true</item>
-        <item name="android:windowAllowEnterTransitionOverlap">true</item>
-        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <!--&lt;!&ndash; android transitions &ndash;&gt;-->
+        <!--<item name="android:windowContentTransitions">true</item>-->
+        <!--<item name="android:windowAllowEnterTransitionOverlap">true</item>-->
+        <!--<item name="android:windowAllowReturnTransitionOverlap">true</item>-->
 
-        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <!--<item name="drawerArrowStyle">@style/DrawerArrowStyle</item>-->
     </style>
 
     <style name="theme1" parent="AppTheme">
