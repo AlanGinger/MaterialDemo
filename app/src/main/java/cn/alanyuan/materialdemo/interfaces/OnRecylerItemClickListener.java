@@ -7,5 +7,5 @@ import android.view.View;
  * Created by alanyuan on 15/3/19.
  */
 public interface OnRecylerItemClickListener {
-    public void onItemClick(View view,int postion);
+    public void onItemClick(View view,int position);
 }

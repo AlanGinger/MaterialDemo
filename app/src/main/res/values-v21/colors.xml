@@ -4,7 +4,7 @@
     <!-- Test colors  -->
     <color name="theme_primary">#ffb74d</color>
     <color name="theme_primaryDark">#EC407A</color>
-    <color name="theme_accent">#009688</color>
+    <color name="theme_accent">#54b8e8</color>
     <color name="theme_navigationBar">#673AB7</color>
     <color name="theme_textColorPrimary">#0277BD</color>
     <color name="theme_windowBackgroud">#CEFFCE</color>

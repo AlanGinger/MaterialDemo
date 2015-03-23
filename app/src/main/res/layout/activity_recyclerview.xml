@@ -4,6 +4,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <FrameLayout
+        android:id="@+id/deleteBar"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:alpha="0.7"
+        android:elevation="1dp"
+        android:background="@drawable/ripple_deletebar"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-light"
+            android:textSize="20sp"
+            android:textColor="?android:colorForeground"
+            android:text="Delete"
+            />
+
+    </FrameLayout>
+
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -11,10 +33,16 @@
         android:id="@+id/recyclerView" />
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/fab_add"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        />
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/ripple"
+        android:stateListAnimator="@anim/fab_anim"
+        android:src="@drawable/ic_action_add"
+        android:elevation="2dp" />
 
 </RelativeLayout>

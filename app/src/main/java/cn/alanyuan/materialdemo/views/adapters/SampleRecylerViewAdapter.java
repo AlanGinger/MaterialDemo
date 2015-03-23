@@ -58,16 +58,15 @@ public class SampleRecylerViewAdapter extends RecyclerView.Adapter<SampleViewHol
     }
 
     //增加Item
-    public void addItem(int postion){
-
-        notifyItemInserted(postion);
+    public void addItem(int position){
+        models.add(position, new SampleModel("哆啦A梦", 101, "哆啦A梦爱吃铜锣烧"));
+        notifyItemInserted(position);
     }
 
     //删除Item
-    public void removeItem(int postion){
-
-
-        notifyItemRemoved(postion);
+    public void removeItem(int position){
+        models.remove(position);
+        notifyItemRemoved(position);
     }
 
     //设置点击监听事件
